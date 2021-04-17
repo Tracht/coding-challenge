@@ -14,4 +14,5 @@ describe('Ship', () => {
         expect(ship.position).toEqual(new Position(0, 1, 'N'));
     })
 
+
 })

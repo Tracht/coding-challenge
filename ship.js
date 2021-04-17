@@ -8,6 +8,10 @@ class Ship {
     position() {
         return this.position;
     }
+
+    move(instruction) {
+        this.position = this.position.change(instruction);
+    }
 }
 
 module.exports = {
