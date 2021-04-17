@@ -84,10 +84,10 @@ describe('Ship', () => {
         expect(ship.position).toEqual(new Position(3,2,'N'));
 
         ship.move('F'); 
-        expect(ship.position).toEqual(new Position(3,3,'N'));
+        expect(ship.position).toEqual(new Position(3,3,'N')); // Print position + LOST
 
         ship.move('F'); 
-        expect(ship.position).toEqual(new Position(3,4,'N')); // Lost
+        expect(ship.position).toEqual(new Position(3,4,'N')); // Lost if bounds = (5,3)
 
         ship.move('R'); 
         expect(ship.position).toEqual(new Position(3,4,'E'));
@@ -121,14 +121,14 @@ describe('Ship', () => {
         expect(ship.position).toEqual(new Position(3,3,'E'));
 
         ship.move('L');
-        expect(ship.position).toEqual(new Position(3,3,'N'));
+        expect(ship.position).toEqual(new Position(3,3,'N')); // Print position + LOST;
         ship.move('F'); 
-        expect(ship.position).toEqual(new Position(3,4,'N')); // Lost
+        expect(ship.position).toEqual(new Position(3,4,'N')); // Lost if bounds = (5,3)
 
         ship.move('L');
-        expect(ship.position).toEqual(new Position(3,4,'W')); // Lost
+        expect(ship.position).toEqual(new Position(3,4,'W'));
         ship.move('F'); 
-        expect(ship.position).toEqual(new Position(2,4,'W')); // Lost
+        expect(ship.position).toEqual(new Position(2,4,'W'));
 
         ship.move('L');
         expect(ship.position).toEqual(new Position(2,4,'S')); // What I get

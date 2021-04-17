@@ -11,4 +11,12 @@ describe('Ship status', () => {
         expect(journey.report(ship, 'RFRFRFRF')).toEqual('1 1 E');
     });
 
+    it('Ship 2 - lost', () => {
+        const command_center =  new CommandCenter(5,3);
+        const ship = new Ship(3, 2, 'N');
+        const journey = new Journey(command_center);
+
+        expect(journey.report(ship, 'FRRFLLFFRRFLL')).toEqual('3 3 N LOST');
+    })
+
 })
