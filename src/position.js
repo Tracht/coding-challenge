@@ -1,3 +1,20 @@
+/**
+ * Position Class can be thought of like a 'GPS' module.
+ *      It is meant to be used within other Classes (i.e. Ship Class).
+ *      It should not be called on directly. 
+ * 
+ * It is initialised with 3 arguments. 
+ *      A location (x,y coordinates - type = integer) and 
+ *      A starting orientation (N, S, E, W - type = strings)
+ * 
+ * It has a method 'updatePosition'. 
+ *      It takes a single argument, 'instruction', (F, L, R - type = strings) 
+ *      It returns a new position instance.  
+ * 
+ * The 'updatePosition' method relies on the static method 'moves'. 
+ *      Moves is an object which tells you by how much x and y should change. 
+ *      It also tells you the new orientation.   
+ */
 class Position {
 
     constructor(x, y, orientation) {
@@ -6,9 +23,9 @@ class Position {
         this.orientation = orientation; 
     }
 
-    change(instruction){
+    updatePosition(instruction){
         const key = `${this.orientation} ${instruction}`;
-        const delta_move = Position.moves[key];
+        const delta_move = Position.moves[key]; // to call on a 'static' method you must do it like this, cannot do "this.moves"
 
         const newX = this.x + delta_move.x;
         const newY = this.y + delta_move.y;

@@ -22,7 +22,7 @@ class Ship {
     }
 
     move(instruction) {
-        this.position = this.position.change(instruction);
+        this.position = this.position.updatePosition(instruction);
     }
 }
 
