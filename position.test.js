@@ -16,6 +16,11 @@ describe("Position", () => {
     expect(position.change('F')).toEqual(new Position(1, 0, 'E'));
     expect(position.change('L')).toEqual(new Position(0, 0, 'N'));
     expect(position.change('R')).toEqual(new Position(0, 0, 'S'));
+
+    var position = new Position(0, 0, 'W');
+    expect(position.change('F')).toEqual(new Position(-1, 0, 'W'));
+    expect(position.change('L')).toEqual(new Position(0, 0, 'S'));
+    expect(position.change('R')).toEqual(new Position(0, 0, 'N'));
   })
 
 
