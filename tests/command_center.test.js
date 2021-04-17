@@ -1,5 +1,5 @@
-const { Ship } = require("./ship");
-const { CommandCenter } = require("./command_center");
+const { Ship } = require("../src/ship");
+const { CommandCenter } = require("../src/command_center");
 
 describe('Command Center with Grid 5,3', () => {
 

@@ -1,4 +1,4 @@
-const { Position } = require('./position');
+const { Position } = require('../src/position');
 
 describe("Position", () => {
   it("Checks from position 0,0,N", () => {

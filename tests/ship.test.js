@@ -1,5 +1,5 @@
-const { Ship } = require('./ship');
-const { Position } = require('./position');
+const { Ship } = require('../src/ship');
+const { Position } = require('../src/position');
 
 describe('Ship', () => {
 

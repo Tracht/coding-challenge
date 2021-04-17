@@ -1,6 +1,6 @@
-const { Ship } = require('./ship');
-const { CommandCenter } = require('./command_center');
-const { Journey } = require('./journey');
+const { Ship } = require('../src/ship');
+const { CommandCenter } = require('../src/command_center');
+const { Journey } = require('../src/journey');
 
 describe('Ship status', () => {
     it('Ship 1 - not lost', () => {
