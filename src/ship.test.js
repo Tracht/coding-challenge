@@ -110,7 +110,6 @@ describe('Ship', () => {
 
         ship.move('L'); 
         expect(ship.position).toEqual(new Position(0,3,'S'));
-
         ship.move('L');
         expect(ship.position).toEqual(new Position(0,3,'E'));
 
@@ -123,13 +122,11 @@ describe('Ship', () => {
 
         ship.move('L');
         expect(ship.position).toEqual(new Position(3,3,'N'));
-
         ship.move('F'); 
         expect(ship.position).toEqual(new Position(3,4,'N')); // Lost
 
         ship.move('L');
         expect(ship.position).toEqual(new Position(3,4,'W')); // Lost
-
         ship.move('F'); 
         expect(ship.position).toEqual(new Position(2,4,'W')); // Lost
 
