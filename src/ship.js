@@ -5,6 +5,14 @@ class Ship {
         this.position = new Position(x, y, orientation);
     }
 
+    getX(){
+        return this.position.x; 
+    }
+
+    getY(){
+        return this.position.y;
+    }
+
     position() {
         return this.position;
     }

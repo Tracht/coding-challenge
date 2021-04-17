@@ -1,5 +1,3 @@
-const ship = require('./ship');
-
 class CommandCenter {
     constructor(x,y){
         this.x = x; 
@@ -7,7 +5,11 @@ class CommandCenter {
     }
 
     isLost(ship){
+
         // if it is negatively out of bounds
+        if ( ship.getX() < this.x || ship.getY() < this.y ) {
+            return true;
+        }
         
     }
 }
