@@ -8,4 +8,10 @@ describe('Ship', () => {
         expect(ship.position).toEqual(new Position(0, 0, 'N'));
     })
 
+    it('Ship goes in a circle', () => {
+        const ship = new Ship(0, 0, 'N');
+        ship.move('F'); 
+        expect(ship.position).toEqual(new Position(0, 1, 'N'));
+    })
+
 })
