@@ -38,17 +38,27 @@ describe('Ship', () => {
     it('Ship 1 - not lost', () => {
         const ship = new Ship(1, 1, 'E');
         ship.move('R');
+        expect(ship.position).toEqual(new Position(1,1,'S'));
+
         ship.move('F'); 
+        expect(ship.position).toEqual(new Position(1,0,'S'));
 
         ship.move('R');
+        expect(ship.position).toEqual(new Position(1,0,'W'));
+
         ship.move('F'); 
+        expect(ship.position).toEqual(new Position(0,0,'W'));
 
         ship.move('R');
+        expect(ship.position).toEqual(new Position(0,0,'N'));
+
         ship.move('F'); 
+        expect(ship.position).toEqual(new Position(0,1,'N'));
 
         ship.move('R');
-        ship.move('F'); 
+        expect(ship.position).toEqual(new Position(0,1,'E'));
 
+        ship.move('F'); 
         expect(ship.position).toEqual(new Position(1,1,'E'));
     })
 
@@ -94,6 +104,5 @@ describe('Ship', () => {
         ship.move('L');
         expect(ship.position).toEqual(new Position(2,3,'S'));
     })
-
 
 })
