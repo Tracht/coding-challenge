@@ -13,6 +13,10 @@ class Ship {
         return this.position.y;
     }
 
+    getOrientation(){
+        return this.position.orientation;
+    }
+
     position() {
         return this.position;
     }
