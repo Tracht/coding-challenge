@@ -64,24 +64,44 @@ describe('Ship', () => {
 
     it('Ship 2 - lost', () => {
         const ship = new Ship(3, 2, 'N');
+
         ship.move('F');
-        ship.move('R'); 
-        ship.move('R');
-
-        ship.move('F'); 
-        ship.move('L'); 
-        ship.move('L'); 
-
-        ship.move('F'); 
-        ship.move('F'); 
+        expect(ship.position).toEqual(new Position(3,3,'N'));
 
         ship.move('R'); 
+        expect(ship.position).toEqual(new Position(3,3,'E'));
+
         ship.move('R');
+        expect(ship.position).toEqual(new Position(3,3,'S'));
 
         ship.move('F'); 
+        expect(ship.position).toEqual(new Position(3,2,'S'));
+
         ship.move('L'); 
+        expect(ship.position).toEqual(new Position(3,2,'E'));
+
+        ship.move('L'); 
+        expect(ship.position).toEqual(new Position(3,2,'N'));
+
+        ship.move('F'); 
+        expect(ship.position).toEqual(new Position(3,3,'N'));
+
+        ship.move('F'); 
+        expect(ship.position).toEqual(new Position(3,4,'N')); // Lost
+
+        ship.move('R'); 
+        expect(ship.position).toEqual(new Position(3,4,'E'));
+
+        ship.move('R');
+        expect(ship.position).toEqual(new Position(3,4,'S'));
+
+        ship.move('F'); 
+        expect(ship.position).toEqual(new Position(3,3,'S'));
+
+        ship.move('L'); 
+        expect(ship.position).toEqual(new Position(3,3,'E'));
+
         ship.move('L');
-
         expect(ship.position).toEqual(new Position(3,3,'N'));
     })
 
