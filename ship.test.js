@@ -75,5 +75,25 @@ describe('Ship', () => {
         expect(ship.position).toEqual(new Position(3,3,'N'));
     })
 
+    it('Ship 3 - not lost', () => {
+        const ship = new Ship(0, 3, 'W');
+
+        ship.move('L'); 
+        ship.move('L');
+
+        ship.move('F'); 
+        ship.move('F'); 
+        ship.move('F');
+
+        ship.move('L');
+        ship.move('F'); 
+
+        ship.move('L');
+        ship.move('F'); 
+
+        ship.move('L');
+        expect(ship.position).toEqual(new Position(2,3,'S'));
+    })
+
 
 })
