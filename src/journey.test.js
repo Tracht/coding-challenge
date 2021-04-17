@@ -26,4 +26,5 @@ describe('Ship status', () => {
 
         expect(journey.report(ship, 'LLFFFLFLFL')).toEqual('2 3 S');
     })
+    
 })
