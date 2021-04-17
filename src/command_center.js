@@ -4,8 +4,6 @@ class CommandCenter {
         this.y = y;
     }
 
- 
-
     isLost(ship){
 
         if ( ship.getX() < 0 || ship.getY() < 0) {
@@ -17,7 +15,6 @@ class CommandCenter {
         }
 
         return false;
-        
     }
 }
 
